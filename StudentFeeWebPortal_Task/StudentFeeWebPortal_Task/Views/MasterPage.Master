@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="StudentFeeWebPortal_Task.Views.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--<meta charset="utf-8" />--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- MORRIS CHART STYLES-->
+    <link href="../../assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <script>
+        $(function () {
+            var current = location.pathname;
+            $('#nav li a').each(function () {
+                var $this = $(this);
+                // if the current path is like this link, make it active
+                if ($this.attr('href').indexOf(current) !== -1) {
+                    $this.addClass('active');
+                }
+            })
+        })
+    </script>
+    <style type="text/css">
+        .hidden-field {
+            display: none;
+        }
+    </style>
+    <script src="../../MaskTextBoxData/jquery-latest.js"></script>
+
+    <script src="../../MaskTextBoxData/jquery.maskedinput-1.3.1.min_.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+        <title></title>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+
+    <form id="form1" runat="server">
+        <div>
+            <div id="wrapper">
+                <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">
+                            <asp:Label ID="Label_UserName" runat="server" Text="Student Fee Managment" Font-Bold="True" Font-Size="14pt"></asp:Label>
+                        </a>
+                    </div>
+
+                    <div style="color: white; padding: 15px 30px 5px 30px; float: left; font-size: 16px;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lbl_UserID" runat="server" Text="1" Font-Size="14pt" Visible="false"></asp:Label>
+                    </div>
+                    <div style="color: white; padding: 5px 20px 5px 30px; float: left; font-size: 16px;">
+                        &nbsp;
+                    </div>
+                    <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
+                        &nbsp;
+                        
+                        
+                         <asp:Button ID="btnLogOut" class="btn btn-danger square-btn-adjust" runat="server" Text="LogOut" OnClick="btnLogOut_Click" CausesValidation="False" />
+                        <%--<a href="LogIn.aspx" class="btn btn-danger square-btn-adjust" >Logout</a> </div>--%>
+                </nav>
+                <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+                    <div class="sidebar-collapse" id="Mnu" runat="server">
+                        <ul class="nav" id="mainmenu">
+
+
+
+
+
+                            <li id="Mnu_RemitAgencyMng" runat="server">
+
+                                <a href="#"><i class="fa fa-building-o fa-2x"></i>Student Management<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li id="sbMnu_AddNewStudent" runat="server" visible="true">
+                                        <a id="A1" href="frm_AddStudent.aspx">Add New Student</a>
+                                    </li>
+
+                                     <li id="sbMnu_ViewStudent" runat="server" visible="true">
+                                        <a id="A1" href="frm_ViewStudent.aspx">View Student</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li id="Mnu_BackOfficeUser" runat="server">
+                                <a href="#"><i class="fa fa-user fa-2x"></i>Fee Management<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                     <li id="Li1" runat="server" visible="true">
+                                        <a id="A1" href="frm_SubmitFee.aspx">Submit Fee</a>
+                                    </li>
+
+                                     <li id="Li2" runat="server" visible="true">
+                                        <a id="A1" href="frm_FeeStatus.aspx">View Fee Status</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <a href="../LogIn.aspx"><i class="fa fa-bolt fa-2x"></i>LogOut</a>
+                            </li>
+                            <li></li>
+                            <li></li>
+
+                        </ul>
+
+                    </div>
+
+                </nav>
+                <!-- /. NAV SIDE  -->
+                <div id="page-wrapper">
+                    <div id="page-inner">
+                        <asp:HiddenField ID="HiddenField_UserName" runat="server" />
+
+
+                        <asp:ContentPlaceHolder ID="inner_page" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                        <!-- /. PAGE INNER  -->
+                    </div>
+                    <!-- /. PAGE WRAPPER  -->
+                </div>
+            </div>
+            <!-- /. WRAPPER  -->
+            <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+            <!-- JQUERY SCRIPTS -->
+            <script src="../../assets/js/jquery-1.10.2.js"></script>
+            <!-- BOOTSTRAP SCRIPTS -->
+            <script src="../../assets/js/bootstrap.min.js"></script>
+            <!-- METISMENU SCRIPTS -->
+            <script src="../../assets/js/jquery.metisMenu.js"></script>
+            <!-- MORRIS CHART SCRIPTS -->
+            <script src="../../assets/js/morris/raphael-2.1.0.min.js"></script>
+            <script src="../../assets/js/morris/morris.js"></script>
+            <!-- CUSTOM SCRIPTS -->
+            <script src="../../assets/js/custom.js"></script>
+        </div>
+    </form>
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
+

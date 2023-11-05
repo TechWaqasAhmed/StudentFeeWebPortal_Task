@@ -1,0 +1,201 @@
+﻿.pull-left
+{
+    float:left;
+}
+.pull-right
+{
+    float:right;
+   
+}
+.clear-fix
+{
+    clear:both;
+}
+body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.nbv-main {
+    /*color:#014574;*/
+    
+    color:#333333;
+}
+.nbv-main
+{
+    /*background-color:aliceblue;*/
+    text-align: center;
+    margin: auto;
+    width: 810px;    
+    min-height: 700px;
+}
+.nbv-inner
+{
+    margin: 0 auto;
+    width: 100%;
+}
+.nbv-inner-subhead
+{
+    width:98%;
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.nbv-inner-detail
+{
+    width:98%;
+    text-align: left;
+    margin: 30px 9px;
+}
+.nbv-inner-detail-left
+{
+    border: 1px solid slategrey;
+    border-right: none;
+    border-bottom:none;
+    line-height: 1.5;
+    padding-left: 5px;
+
+}
+.nbv-inner-detail-right
+{
+    border: 1px solid slategrey;
+    line-height: 1.5;
+    border-bottom:none;
+    padding-left: 5px;
+ 
+}
+.text-align-left
+{
+    text-align:left;
+}
+.margin-bottom
+{
+    margin-bottom: 10px;
+}
+.margin-top-15
+{
+    margin-top:15px;
+}
+.margin-top-20
+{
+    margin-top:20px;
+}
+.margin-top
+{
+    margin-top: 100px;
+}
+.margin-right-200
+{
+    margin-right:250px;
+}
+.width-25
+{
+    width:24%;
+}
+.width-50
+{
+    width:46%;
+}
+.width-75
+{
+    width:74%;
+}
+.under-line
+{
+    text-decoration:underline;
+}
+.border-bottom
+{
+    border-bottom: 1px solid slategrey;
+}
+.nbv-inner-detail p
+{
+    position: absolute; 
+    bottom:3px;
+}
+
+/*Finger Print Page stylingis here */
+.finger-print label
+{
+    color: red;
+}
+.btn-submit
+{
+    width: 150px;
+    background-color: #3e729e;
+    padding: 2px;
+    border: 1px solid slateblue;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-submit-atd
+{
+    width: 250px;
+    background-color: #3e729e;
+    padding: 4px;
+    border: 1px solid slateblue;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right:200px;
+}
+.select-finger
+{
+    width:20%;
+    text-align:center
+}
+.select-finger h3
+{
+    color: #014574;
+    text-align: right;
+    margin-right: 50px;
+}
+.finger-print
+{
+    width:50%;
+    
+}
+.finger-print h3
+{
+    color: #014574;
+    height: 33px;
+    width: 167px;
+    margin-top: 18px;
+}
+.finger-print-input
+{
+    margin-top: 7px;
+    border: 0px;
+    background-color: transparent;
+}
+.select-finger-rdbtn
+{
+    text-align: justify;
+    margin-left: 0px;
+    line-height: 1.9;
+}
+.mobile-cnic
+{    
+    text-align: justify;
+    padding-left: 10px;
+    padding-right:10px
+    line-height: 1.9;
+}
+.mobile-cnic-input
+{
+    margin-top: 5px;
+    border: 1px solid #3e729e;
+    padding: 2px;
+    border-radius:5px;
+}
+.margin-left-214
+{
+    margin-left: 231px;
+}
